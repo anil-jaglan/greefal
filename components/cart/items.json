@@ -1,0 +1,92 @@
+{
+    "items": [
+        {
+            "id": "abc",
+            "name": "Apple",
+            "price": 120,
+            "priceBefore": 130,
+            "discount": 0.1,
+            "unit": "Kg",
+            "currency": "₹",
+            "qty": 2,
+            "img": "apple.png"
+        },
+        {
+            "id": "xyz",
+            "name": "Banana",
+            "price": 40,
+            "priceBefore": 50,
+            "discount": 0.2,
+            "unit": "Dozen",
+            "currency": "₹",
+            "qty": 2,
+            "img": "banana.png"
+        },
+        {
+            "id": "abc",
+            "name": "Apple",
+            "price": 120,
+            "priceBefore": 130,
+            "discount": 0.1,
+            "unit": "Kg",
+            "currency": "₹",
+            "qty": 2,
+            "img": "apple.png"
+        },
+        {
+            "id": "xyz",
+            "name": "Banana",
+            "price": 40,
+            "priceBefore": 50,
+            "discount": 0.2,
+            "unit": "Dozen",
+            "currency": "₹",
+            "qty": 2,
+            "img": "banana.png"
+        },
+        {
+            "id": "abc",
+            "name": "Apple",
+            "price": 120,
+            "priceBefore": 130,
+            "discount": 0.1,
+            "unit": "Kg",
+            "currency": "₹",
+            "qty": 2,
+            "img": "apple.png"
+        },
+        {
+            "id": "xyz",
+            "name": "Banana",
+            "price": 40,
+            "priceBefore": 50,
+            "discount": 0.2,
+            "unit": "Dozen",
+            "currency": "₹",
+            "qty": 2,
+            "img": "banana.png"
+        },
+        {
+            "id": "abc",
+            "name": "Apple",
+            "price": 120,
+            "priceBefore": 130,
+            "discount": 0.1,
+            "unit": "Kg",
+            "currency": "₹",
+            "qty": 2,
+            "img": "apple.png"
+        },
+        {
+            "id": "xyz",
+            "name": "Banana",
+            "price": 40,
+            "priceBefore": 50,
+            "discount": 0.2,
+            "unit": "Dozen",
+            "currency": "₹",
+            "qty": 2,
+            "img": "banana.png"
+        }
+    ]
+}

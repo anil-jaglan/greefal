@@ -7,6 +7,12 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+    "sdkVersion": "38.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -18,11 +24,15 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
     "web": {
       "favicon": "./assets/images/favicon.png"
+    },
+    "android": {
+      "package": "com.greefal"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.greefal"
     }
   }
 }
