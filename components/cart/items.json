@@ -1,18 +1,18 @@
 {
     "items": [
         {
-            "id": "abc",
+            "id": "apple",
             "name": "Apple",
             "price": 120,
             "priceBefore": 130,
             "discount": 0.1,
             "unit": "Kg",
             "currency": "₹",
-            "qty": 2,
+            "qty": 1,
             "img": "apple.png"
         },
         {
-            "id": "xyz",
+            "id": "banana",
             "name": "Banana",
             "price": 40,
             "priceBefore": 50,
@@ -23,70 +23,59 @@
             "img": "banana.png"
         },
         {
-            "id": "abc",
-            "name": "Apple",
+            "id": "potato",
+            "name": "Potato",
             "price": 120,
             "priceBefore": 130,
             "discount": 0.1,
             "unit": "Kg",
             "currency": "₹",
-            "qty": 2,
+            "qty": 3,
             "img": "apple.png"
         },
         {
-            "id": "xyz",
-            "name": "Banana",
+            "id": "tomcato",
+            "name": "Tomato",
             "price": 40,
             "priceBefore": 50,
             "discount": 0.2,
-            "unit": "Dozen",
+            "unit": "Kg",
             "currency": "₹",
-            "qty": 2,
+            "qty": 4,
             "img": "banana.png"
         },
         {
-            "id": "abc",
-            "name": "Apple",
+            "id": "grapes",
+            "name": "Grapes",
             "price": 120,
             "priceBefore": 130,
             "discount": 0.1,
             "unit": "Kg",
             "currency": "₹",
-            "qty": 2,
+            "qty": 8,
             "img": "apple.png"
         },
         {
-            "id": "xyz",
-            "name": "Banana",
+            "id": "avacado",
+            "name": "Avacado",
             "price": 40,
             "priceBefore": 50,
             "discount": 0.2,
-            "unit": "Dozen",
-            "currency": "₹",
-            "qty": 2,
-            "img": "banana.png"
-        },
-        {
-            "id": "abc",
-            "name": "Apple",
-            "price": 120,
-            "priceBefore": 130,
-            "discount": 0.1,
             "unit": "Kg",
             "currency": "₹",
-            "qty": 2,
+            "qty": 8,
             "img": "apple.png"
         },
         {
-            "id": "xyz",
-            "name": "Banana",
-            "price": 40,
+            "id": "kiwi",
+            "name": "Kiwi",
+            "price": 16,
             "priceBefore": 50,
             "discount": 0.2,
-            "unit": "Dozen",
+            "unit": "Piece",
             "currency": "₹",
-            "qty": 2,
-            "img": "banana.png"
+            "qty": 1,
+            "img": "apple.png"
         }
     ]
 }

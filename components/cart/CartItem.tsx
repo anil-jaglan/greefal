@@ -1,31 +1,45 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Image, StyleSheet } from 'react-native';
-import Colors from '../../constants/Colors';
-import useColorScheme from '../../hooks/useColorScheme';
+import PropTypes from 'prop-types';
 
 import { Text, View } from '../Themed';
 
-const colorScheme = useColorScheme();
+import Counter from '../counter/Counter';
 
-export default function CartItem({ item }) {
+export default function CartItem({ item, onItemUpdate }) {
+
+    function onChange(count: any, type: string) {
+        onItemUpdate && onItemUpdate(item, count);
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.imgContainer}>
                 <Image
                     style={styles.image}
-                    source={require('../../assets/images/cart/' + item.img)}
+                    source={require('../../assets/images/cart/apple.png')}
                 />
             </View>
             <View style={styles.info}>
-                <Text style={styles.infoTitle}>{item.name}</Text>
-                <Text style={styles.infoPrice}>{item.currency}{item.price}{' / '}{item.unit}</Text>
-            </View>
-            <View style={styles.qty}>
-                <Text style={styles.qtyTxt}>{item.qty}{' '}{item.unit}</Text>
-                <Text style={styles.total}>{item.currency}{' '}{item.price * item.qty}</Text>
+                <View style={styles.infoHeader}>
+                    <View style={styles.title}>
+                        <Text style={styles.titleTxt}>{item.name}</Text>
+                    </View>
+                    <View style={styles.qty}>
+                        <Text style={styles.qtyTxt}>{item.qty}{' '}{item.unit}</Text>
+                    </View>
+                </View>
+                <View style={styles.price}>
+                    <Text style={styles.priceTxt}>{item.currency}{item.price}{' / '}{item.unit}</Text>
+                </View>
             </View>
             <View style={styles.gears}>
-                <Text>{item.name}</Text>
+                <Counter
+                    start={item.qty}
+                    min={0}
+                    max={50}
+                    onChange={onChange}
+                />
             </View>
         </View>
     );
@@ -40,9 +54,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0.1,
     },
     imgContainer: {
-        flex: 1,
         width: '20%',
-        flexDirection: 'row',
         padding: 5,
     },
     image: {
@@ -51,51 +63,64 @@ const styles = StyleSheet.create({
     },
     info: {
         flex: 1,
-        width: '50%',
+        width: '45%',
         padding: 5,
-        paddingLeft: 20,
         alignItems: 'flex-start',
     },
-    qty: {
+    infoHeader: {
         flex: 1,
-        width: '10%',
-        padding: 5,
-        alignItems: 'center',
+        flexDirection: 'row',
+        width: '100%',
     },
-    qtyTxt: {
-        fontSize: 12,
-        fontWeight: '600',
-        color: '#a3a3a3',        
-        textAlign: 'center',
-        paddingBottom: 10,
-    },
-    total: {
-        fontSize: 12,
-        fontWeight: '600',        
-        textAlign: 'center',
-        padding: 5,
-        borderRadius: 5,
-        color: '#ffffff',
-        backgroundColor: '#909590',
-        minWidth: 60,
-        maxWidth: '100%',
-    },
-    infoTitle: {
+    title: {
+        flex: 1,
+        alignItems: 'flex-start'
+    },    
+    titleTxt: {
         fontSize: 18,
         fontWeight: '500',
         textAlign: 'center',
         paddingBottom: 10,
     },
-    infoPrice: {
+    qty: {
+        flex: 1,
+        paddingTop: 2,
+    },
+    qtyTxt: {
+        fontSize: 12,
+        fontWeight: '600',
+        color: '#a3a3a3',
+        textAlign: 'center',
+        paddingBottom: 10,
+    },
+    price: {
+        flex: 1,
+    },
+    priceTxt: {
         fontSize: 12,
         fontWeight: '400',
         color: '#a3a3a3',
         textAlign: 'center',
         paddingTop: 0,
     },
+    itemTotal: {
+        fontSize: 12,
+        fontWeight: '600',
+        textAlign: 'center',
+        padding: 5,
+        borderRadius: 5,
+        color: '#ffffff',
+        backgroundColor: '#758478',
+        minWidth: 60,
+        maxWidth: '100%',
+    },
     gears: {
-        flex: 1,
-        width: '20%',
+        alignItems: 'flex-end',
+        width: '35%',
         padding: 5,
     },
 });
+
+CartItem.propTypes = {
+    onItemUpdate: PropTypes.func,
+} 

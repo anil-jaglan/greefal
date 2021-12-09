@@ -9,11 +9,10 @@ import { HomeParamList } from '../types';
 import HomeScreen from '../screens/HomeScreen';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const colorScheme = useColorScheme();
-
 const HomeStack = createStackNavigator<HomeParamList>();
 
 export default function HomeNavigator() {
+    const colorScheme = useColorScheme();
     const navigation = useNavigation();
     const color = Colors[colorScheme].tint;
     return (
